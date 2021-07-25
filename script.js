@@ -14,7 +14,7 @@ function setMovieData(movieIndex, moviePrice){
     localStorage.setItem('selectedMoviePrice', moviePrice);
 }
 
-//Getdata from local stporage and populate UI
+// Getdata from local stporage and populate UI
 function populateUI() {
     const selectedSeats = JSON.parse(localStorage.getItem('selectedSeats'));
     
@@ -55,7 +55,7 @@ function updateSelectedCount() {
     count.innerText = selectedSeatsCount;
     total.innerText = selectedSeatsCount * ticketPrice;
 }
-
+// listener on seat selecting
 container.addEventListener('click', (e) => {
     if (e.target.classList.contains('seat') && !e.target.classList.contains('occupied')) {
 
